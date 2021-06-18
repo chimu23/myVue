@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amie</title>
+    <link rel="stylesheet" href="./index.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="" id="" placeholder="input输入框" />
+      <!-- <div class="btn" style="--top:60px;--left:60px">确定</div> -->
+      <div>
+        <span>{{msg}}</span>
+        <span>{{msg}}</span>
+      </div>
+    </div>
+    <!-- <script>
+      window.onload = function(){
+       const btn =  document.querySelector('.btn')
+       btn.addEventListener('mouseover',function(e){
+        this.style.setProperty('--top',e.offsetY+'px')
+        this.style.setProperty('--left',e.offsetX+'px')
+       })
+      }
+    </script> -->
+    <script src="./bus.js"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data() {
+          return {
+            msg: '123',
+          };
+        },
+      });
+      // document.querySelector('button').onclick = function () {
+      //   vm.msg = 'abc';
+      //   console.log(Object.keys(vm));
+      // };
+    </script>
+  </body>
+</html>

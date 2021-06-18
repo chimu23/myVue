@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    position: relative;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid orange;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    &::after{
+        content: "";
+        position: absolute;
+        top: var(--top);
+        left: var(--left);
+        background: none 0px 0px repeat scroll rgb(228, 84, 70);
+        border-radius: 50%;
+        height: 0px;
+        transform: translate(-50%, -50%);
+        transition: width 0.5s ease 0s, height 0.5s ease 0s;
+        width: 0px;
+        z-index: -1;
+        
+    }
+    &:hover{
+        border-color: transparent;
+        color: #fff;
+        &::after{
+            width: 280%;
+            height: 280%;
+        }
+    }
+}

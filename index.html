@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amie</title>
+    <link rel="stylesheet" href="./index.min.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>{{msg}}</div>
+      <input type="text" class="input" v-model="name">
+      {{name}}
+    </div>
+
+    <script src="./myVue.js"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data() {
+          return {
+            msg: '123',
+            name:'Rick&Mority'
+          };
+        },
+      });
+    </script>
+  </body>
+</html>
